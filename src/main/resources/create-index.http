@@ -1,0 +1,14 @@
+PUT http://localhost:9200/exchange-rates
+Content-Type: application/json
+
+{
+  "mappings": {
+    "properties": {
+      "id": { "type": "keyword" },
+      "base": { "type": "keyword" },
+      "date": { "type": "keyword" },
+      "timestamp": { "type": "date" },
+      "rates": { "type": "object" }
+    }
+  }
+}
